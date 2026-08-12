@@ -1,0 +1,12 @@
+{
+  "name": "khushi-website",
+  "version": "1.0.0",
+  "description": "Interactive website for Khushi by Ayush",
+  "main": "index.html",
+  "scripts": {
+    "start": "node scripts/local-server.js"
+  },
+  "keywords": [],
+  "author": "Ayush",
+  "license": "ISC"
+}
