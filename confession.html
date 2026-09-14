@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confession — For Khushi</title>
-  <meta name="description" content="The things Ayush never said out loud — until now.">
+  <meta name="description" content="The things Ayush never knew how to say out loud — written with honesty, patience, and love for Khushi.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +16,9 @@
   <style>
     /* Confession-specific styles */
     .confession-intro {
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 100px 40px 60px;
+      padding: 0 40px 40px;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -55,12 +55,12 @@
       opacity: 0.7;
     }
 
-    /* Thought bubbles / confession entries */
+    /* Confession entries list */
     .confessions-list {
       display: flex;
       flex-direction: column;
       gap: 0;
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto;
       padding: 0 40px 80px;
       position: relative;
@@ -68,30 +68,33 @@
     }
 
     .confession-entry {
-      padding: 40px 0;
-      border-bottom: 1px solid rgba(184, 169, 212, 0.06);
+      padding: 52px 0;
+      border-bottom: 1px solid rgba(184, 169, 212, 0.08);
       position: relative;
     }
 
-    .confession-entry:last-child { border-bottom: none; }
+    .confession-entry:last-child {
+      border-bottom: none;
+    }
 
     .conf-number {
       font-family: 'Inter', sans-serif;
-      font-size: 0.58rem;
+      font-size: 0.6rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent);
-      opacity: 0.45;
-      margin-bottom: 14px;
+      opacity: 0.55;
+      margin-bottom: 16px;
     }
 
     .conf-heading {
       font-family: 'EB Garamond', Georgia, serif;
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-size: clamp(1.6rem, 2.8vw, 2.3rem);
       font-weight: 400;
       color: #f0eef8;
-      margin-bottom: 16px;
-      line-height: 1.2;
+      margin-bottom: 22px;
+      line-height: 1.25;
+      letter-spacing: -0.2px;
     }
 
     .conf-heading em {
@@ -102,25 +105,51 @@
     .conf-body {
       font-family: 'EB Garamond', Georgia, serif;
       font-style: italic;
-      font-size: clamp(1rem, 1.4vw, 1.12rem);
-      color: rgba(160, 154, 184, 0.88);
+      font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+      color: rgba(160, 154, 184, 0.9);
       line-height: 2;
+    }
+
+    .conf-body p {
+      margin-bottom: 1.35rem;
+    }
+
+    .conf-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .conf-body strong {
+      color: #f7f4ff;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .conf-highlight {
+      font-size: 1.12em;
+      color: #ffffff;
+      padding: 14px 22px;
+      background: rgba(184, 169, 212, 0.06);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      margin: 1.6rem 0;
+      font-style: italic;
+      line-height: 1.85;
     }
 
     .conf-sign {
       font-family: 'Great Vibes', cursive;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: var(--rose);
-      opacity: 0.55;
+      opacity: 0.65;
       display: block;
-      margin-top: 20px;
+      margin-top: 24px;
     }
 
     /* Big cinematic quote */
     .cinematic-quote {
       max-width: 820px;
       margin: 0 auto;
-      padding: 80px 40px;
+      padding: 70px 40px 80px;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -129,8 +158,8 @@
     .cinematic-quote blockquote {
       font-family: 'EB Garamond', Georgia, serif;
       font-style: italic;
-      font-size: clamp(1.5rem, 3.5vw, 2.8rem);
-      color: rgba(240, 238, 248, 0.85);
+      font-size: clamp(1.45rem, 3.2vw, 2.5rem);
+      color: rgba(240, 238, 248, 0.88);
       line-height: 1.55;
       font-weight: 400;
       letter-spacing: -0.3px;
@@ -157,13 +186,14 @@
       font-size: 1.8rem;
       color: var(--accent-soft);
       font-style: normal;
-      opacity: 0.55;
+      opacity: 0.65;
     }
 
     @media (max-width: 768px) {
       .confessions-list { padding: 0 20px 60px; }
-      .cinematic-quote { padding: 60px 20px; }
-      .confession-intro { padding: 80px 20px 40px; }
+      .cinematic-quote { padding: 50px 20px 60px; }
+      .confession-intro { padding: 0 20px 30px; }
+      .confession-entry { padding: 40px 0; }
     }
   </style>
 </head>
@@ -191,15 +221,15 @@
 
     <!-- PAGE HERO -->
     <div class="page-hero">
-      <p class="page-eyebrow">✦ &nbsp; things I needed to say &nbsp; ✦</p>
+      <p class="page-eyebrow">✦ &nbsp; Things I Needed To Say &nbsp; ✦</p>
       <h1 class="page-title">
         Con
         <span class="script">fession</span>
       </h1>
       <p class="page-subtitle">
-        The things I haven't said out loud yet.<br>
-        The things I think about at 2am.<br>
-        The things that are completely, only, about you.
+        There are some things I don't know how to say when I'm talking to you.<br>
+        Because when I'm actually with you, I usually end up saying something stupid, making a joke, or just looking at you and forgetting what I was going to say.<br><br>
+        So I'm writing them here.
       </p>
       <div class="scroll-cue">
         <span>Read on</span>
@@ -210,160 +240,374 @@
     <!-- CINEMATIC QUOTE -->
     <div class="cinematic-quote">
       <blockquote>
-        I don't know how to explain what happens when I think about you —
-        it's like something settles. Everything gets quieter.
-        And I realize I've been waiting for exactly this, without knowing it.
+        “I don't want my love to become a cage for you...<br>
+        I want a version where we both choose each other. Every day. Freely.”
       </blockquote>
       <cite>— Ayush</cite>
     </div>
 
-    <!-- VOICE NOTES SECTION -->
-    <div class="section-block" style="max-width:760px; position:relative; z-index:2;">
-      <p class="block-label">✦ Voice Notes &nbsp; Coming Soon</p>
-      <h2 class="block-heading">Things I <em>Recorded</em><br>Just for You</h2>
-      <div class="block-rule"></div>
-      <p class="block-body">
-        Some things are harder to write than to say. These are the voice notes —
-        raw, unfiltered — the way I actually talk when I'm thinking about you.
-        They'll appear here soon.
-      </p>
-    </div>
-
-    <!-- VOICE NOTE PLACEHOLDERS -->
-    <div class="voice-cards">
-
-      <div class="voice-card">
-        <div class="voice-icon">🎙️</div>
-        <div>
-          <p class="voice-meta-label">Voice Note · 01</p>
-          <p class="voice-title">The first thing I noticed about you</p>
-          <!-- Waveform animation placeholder -->
-          <div class="waveform">
-            <div class="wave-bar" style="height:8px;  --d:0.8s; --delay:0s"></div>
-            <div class="wave-bar" style="height:20px; --d:1.1s; --delay:0.1s"></div>
-            <div class="wave-bar" style="height:14px; --d:0.9s; --delay:0.05s"></div>
-            <div class="wave-bar" style="height:28px; --d:1.3s; --delay:0.15s"></div>
-            <div class="wave-bar" style="height:10px; --d:0.7s; --delay:0.2s"></div>
-            <div class="wave-bar" style="height:22px; --d:1.0s; --delay:0.08s"></div>
-            <div class="wave-bar" style="height:16px; --d:1.2s; --delay:0.18s"></div>
-            <div class="wave-bar" style="height:30px; --d:0.9s; --delay:0.03s"></div>
-            <div class="wave-bar" style="height:12px; --d:1.4s; --delay:0.22s"></div>
-            <div class="wave-bar" style="height:24px; --d:0.8s; --delay:0.12s"></div>
-            <div class="wave-bar" style="height:8px;  --d:1.1s; --delay:0.07s"></div>
-            <div class="wave-bar" style="height:18px; --d:1.3s; --delay:0.25s"></div>
-          </div>
-          <!-- Drop your audio file here: <audio controls src="assets/audio/voice-01.mp3"></audio> -->
-          <span class="voice-coming-soon"><div class="voice-dot"></div> Audio coming soon</span>
-        </div>
-      </div>
-
-      <div class="voice-card">
-        <div class="voice-icon">🎙️</div>
-        <div>
-          <p class="voice-meta-label">Voice Note · 02</p>
-          <p class="voice-title">What I think about when it's quiet</p>
-          <div class="waveform">
-            <div class="wave-bar" style="height:18px; --d:1.0s; --delay:0.1s"></div>
-            <div class="wave-bar" style="height:10px; --d:0.8s; --delay:0s"></div>
-            <div class="wave-bar" style="height:26px; --d:1.3s; --delay:0.2s"></div>
-            <div class="wave-bar" style="height:8px;  --d:0.9s; --delay:0.05s"></div>
-            <div class="wave-bar" style="height:22px; --d:1.1s; --delay:0.15s"></div>
-            <div class="wave-bar" style="height:14px; --d:1.2s; --delay:0.08s"></div>
-            <div class="wave-bar" style="height:30px; --d:0.7s; --delay:0.22s"></div>
-            <div class="wave-bar" style="height:16px; --d:1.4s; --delay:0.18s"></div>
-            <div class="wave-bar" style="height:20px; --d:1.0s; --delay:0.03s"></div>
-            <div class="wave-bar" style="height:12px; --d:0.9s; --delay:0.25s"></div>
-          </div>
-          <span class="voice-coming-soon"><div class="voice-dot"></div> Audio coming soon</span>
-        </div>
-      </div>
-
-      <div class="voice-card">
-        <div class="voice-icon">🎙️</div>
-        <div>
-          <p class="voice-meta-label">Voice Note · 03</p>
-          <p class="voice-title">The thing I've been meaning to tell you</p>
-          <div class="waveform">
-            <div class="wave-bar" style="height:12px; --d:1.2s; --delay:0s"></div>
-            <div class="wave-bar" style="height:24px; --d:0.9s; --delay:0.12s"></div>
-            <div class="wave-bar" style="height:8px;  --d:1.1s; --delay:0.06s"></div>
-            <div class="wave-bar" style="height:20px; --d:1.3s; --delay:0.2s"></div>
-            <div class="wave-bar" style="height:32px; --d:0.8s; --delay:0.1s"></div>
-            <div class="wave-bar" style="height:14px; --d:1.0s; --delay:0.15s"></div>
-            <div class="wave-bar" style="height:26px; --d:1.4s; --delay:0.05s"></div>
-            <div class="wave-bar" style="height:10px; --d:0.7s; --delay:0.22s"></div>
-          </div>
-          <span class="voice-coming-soon"><div class="voice-dot"></div> Audio coming soon</span>
-        </div>
-      </div>
-
-    </div><!-- /voice-cards -->
-
-    <!-- WRITTEN CONFESSIONS -->
+    <!-- WRITTEN CONFESSIONS LIST -->
     <div class="confessions-list">
 
+      <!-- 01 -->
       <div class="confession-entry">
         <p class="conf-number">✦ Confession 01</p>
-        <h3 class="conf-heading">I think about you <em>more than I say</em></h3>
-        <p class="conf-body">
-          There are moments in the middle of the day — completely random,
-          completely ordinary — where you just appear in my mind. A photo,
-          something you said, the way you laughed. And I stop for a second.
-          Just a second. And then I keep going. But I thought of you.
-          I think of you a lot.
-        </p>
+        <h2 class="conf-heading">I Think About You <em>More Than I Say</em></h2>
+        <div class="conf-body">
+          <p>
+            You appear in my head at the most random times.
+          </p>
+          <p>
+            I'll be doing something completely normal and suddenly remember your face.
+          </p>
+          <p>
+            Something you said.<br>
+            A photo.<br>
+            A joke.<br>
+            The way you laughed.<br>
+            A moment that probably lasted five seconds but somehow stayed with me for days.
+          </p>
+          <p>
+            And sometimes I don't even want to admit how often it happens.
+          </p>
+          <div class="conf-highlight">
+            But it does.<br>
+            I think about you. A lot.
+          </div>
+        </div>
         <span class="conf-sign">— Ayush</span>
       </div>
 
+      <!-- 02 -->
       <div class="confession-entry">
         <p class="conf-number">✦ Confession 02</p>
-        <h3 class="conf-heading">That photo of us — <em>the desk one</em></h3>
-        <p class="conf-body">
-          That photo of our hands under the desk. I've looked at it more times
-          than I should admit. There's something about it — the way it's hidden,
-          the way it's real, the way it's ours — that hits me differently every
-          time. I don't know. It just does something to me.
-        </p>
+        <h2 class="conf-heading">The Bouquet Wasn't <em>Just a Bouquet</em></h2>
+        <div class="conf-body">
+          <p>I want you to understand this one.</p>
+          <p>
+            When I came with those flowers, I wasn't trying to impress you.<br>
+            I wasn't trying to prove that I'm a better boyfriend.<br>
+            I wasn't trying to create some grand gesture so you would owe me something.
+          </p>
+          <p>
+            I just wanted to give you something beautiful because, in my head, you deserved a beautiful moment.
+          </p>
+          <p>
+            And when I saw your reaction, I remember thinking:
+          </p>
+          <div class="conf-highlight">
+            <strong>“This is exactly why I came.”</strong>
+          </div>
+          <p>
+            Your smile made everything worth it.<br>
+            The whole journey. The planning. The nervousness. Everything.
+          </p>
+          <p>
+            Because for those few hours, I wasn't thinking about the future.
+            I wasn't thinking about what might happen.
+            I was just happy that I was there with you.
+          </p>
+        </div>
         <span class="conf-sign">— Ayush</span>
       </div>
 
+      <!-- PHOTO INTERLUDE - Flowers Bouquet -->
+      <div class="featured-photo" style="padding: 20px 0 30px;">
+        <img src="assets/images/khushi_flowers.jpg" alt="Khushi with flowers bouquet" loading="lazy">
+        <p class="featured-photo-caption">“Your smile made everything worth it.”</p>
+      </div>
+
+      <!-- 03 -->
       <div class="confession-entry">
         <p class="conf-number">✦ Confession 03</p>
-        <h3 class="conf-heading">The card you made — <em>"I love you, Bayu"</em></h3>
-        <p class="conf-body">
-          The card with the lipstick marks and the "I love you" written everywhere —
-          with "Bayu" at the bottom. I look at that and I feel something that's very
-          hard to put into words. It's warmth. It's weight. It's this feeling that
-          something real is happening here, and I want to protect it completely.
-        </p>
+        <h2 class="conf-heading">That Day Is One of <em>My Favourite Memories</em></h2>
+        <div class="conf-body">
+          <p>
+            The temple.<br>
+            The rain.<br>
+            Your hand in mine.<br>
+            The little moments between us.<br>
+            The photos.<br>
+            The feeling of walking beside you.<br>
+            The way everything felt simple for a while.
+          </p>
+          <p>
+            I wish I could explain what that felt like without making it sound dramatic.
+          </p>
+          <p>
+            It wasn't some huge cinematic moment. It was actually the opposite.
+          </p>
+          <div class="conf-highlight">
+            It was quiet. Simple. Real.<br>
+            And that's why I remember it.
+          </div>
+        </div>
         <span class="conf-sign">— Ayush</span>
       </div>
 
+      <!-- 04 -->
       <div class="confession-entry">
         <p class="conf-number">✦ Confession 04</p>
-        <h3 class="conf-heading">I'm <em>not letting go</em></h3>
-        <p class="conf-body">
-          I want to be very clear about this one. I'm not confused. I'm not uncertain.
-          I know what I want. I want mornings where I get to say good morning to you.
-          I want to know what your favourite version of yourself looks like.
-          I want to show up when things are hard. I'm not letting go.
-          Not unless you ask me to. And maybe not even then.
-        </p>
+        <h2 class="conf-heading">Your <em>“I Love You, Ayu”</em></h2>
+        <div class="conf-body">
+          <p>
+            You once made me that card.
+          </p>
+          <p>
+            <em>“I love you, Ayu.”</em><br>
+            With the lipstick marks. With all those little details.
+          </p>
+          <p>
+            I don't think you understand what that meant to me.
+          </p>
+          <p>
+            I kept it because it wasn't just paper. It was a moment where you gave me something that came from you.
+          </p>
+          <p>
+            And every time I see it, I remember that there was a time when we weren't trying to figure everything out.
+            We were just two people who loved each other.
+          </p>
+          <p>
+            And I don't want to erase that memory just because things later became complicated.
+          </p>
+        </div>
         <span class="conf-sign">— Ayush</span>
       </div>
 
-    </div>
+      <!-- PHOTO INTERLUDE - Card -->
+      <div class="featured-photo" style="padding: 20px 0 30px;">
+        <img src="assets/images/love_you_bayu_card.jpg" alt="I Love You Ayu card" loading="lazy">
+        <p class="featured-photo-caption">“It wasn't just paper. It came from you.”</p>
+      </div>
 
-    <!-- FULL PHOTO — love you bayu card -->
-    <div class="featured-photo" style="position:relative;z-index:2;">
-      <img src="assets/images/love_you_bayu_card.jpg" alt="I Love You Bayu" loading="lazy">
-      <p class="featured-photo-caption">She made this. I keep it safe.</p>
+      <!-- 05 -->
+      <div class="confession-entry">
+        <p class="conf-number">✦ Confession 05</p>
+        <h2 class="conf-heading">I Need to Confess <em>Something Else</em></h2>
+        <div class="conf-body">
+          <p>
+            I know I've sometimes loved you from a place of fear.
+          </p>
+          <p>
+            Fear that I'll lose you.<br>
+            Fear that someone else will become more important to you.<br>
+            Fear that you'll wake up one day and realize you don't want me anymore.
+          </p>
+          <p>
+            And sometimes that fear made me behave in ways I don't like.
+          </p>
+          <p>
+            I asked too many questions.<br>
+            I wanted too much reassurance.<br>
+            I called too much.<br>
+            I wanted to know what was happening because not knowing scared me.
+          </p>
+          <p>
+            I sometimes confused loving you with needing to know everything about you.
+          </p>
+          <p>
+            And I'm learning the difference.
+          </p>
+          <div class="conf-highlight">
+            I don't want my love to become a cage for you.<br>
+            I don't want you to feel like you have to answer every call because you're afraid I'll fall apart.<br>
+            I don't want you to feel responsible for keeping me calm.<br>
+            That's not the kind of love I want to give you.
+          </div>
+        </div>
+        <span class="conf-sign">— Ayush</span>
+      </div>
+
+      <!-- 06 -->
+      <div class="confession-entry">
+        <p class="conf-number">✦ Confession 06</p>
+        <h2 class="conf-heading">I Don't Want to <em>Fix You</em></h2>
+        <div class="conf-body">
+          <p>
+            I used to think that if you were hurting, I had to fix it.<br>
+            If you were scared, I had to make the fear disappear.<br>
+            If you were confused, I had to give you the answer.<br>
+            If your past hurt you, I wanted to somehow make your past stop hurting.
+          </p>
+          <p>
+            But I finally understand something.
+          </p>
+          <div class="conf-highlight">
+            <strong>You're not a problem I need to solve.<br>
+            You're a person I love.</strong>
+          </div>
+          <p>
+            And sometimes the best thing I can do is simply listen.
+          </p>
+          <p>
+            Sometimes I need to give you space.<br>
+            Sometimes I need to let you figure things out without trying to pull the answer out of you.
+          </p>
+        </div>
+        <span class="conf-sign">— Ayush</span>
+      </div>
+
+      <!-- 07 -->
+      <div class="confession-entry">
+        <p class="conf-number">✦ Confession 07</p>
+        <h2 class="conf-heading">I Know You're <em>Confused</em></h2>
+        <div class="conf-body">
+          <p>
+            And I don't want to pretend I don't know that.
+          </p>
+          <p>
+            I know there are things inside you that you're still trying to understand.<br>
+            I know your past still affects you.<br>
+            I know sometimes you can be close to me and suddenly feel overwhelmed.<br>
+            I know you can tell me you love me and then feel like you need distance.
+          </p>
+          <p>
+            I've seen that contradiction.
+          </p>
+          <p>
+            And honestly? It has confused me too.
+          </p>
+          <p>
+            But I don't want to turn your confusion into something I use against you.
+          </p>
+          <div class="conf-highlight">
+            I just want honesty. That's all.
+          </div>
+        </div>
+        <span class="conf-sign">— Ayush</span>
+      </div>
+
+      <!-- 08 -->
+      <div class="confession-entry">
+        <p class="conf-number">✦ Confession 08</p>
+        <h2 class="conf-heading">If You <em>Choose Me</em></h2>
+        <div class="conf-body">
+          <p>
+            I don't need some perfect relationship.<br>
+            I don't need you to call me every hour.<br>
+            I don't need you to never get irritated.<br>
+            I don't need you to become someone you're not.
+          </p>
+          <p>
+            I just need honesty.
+          </p>
+          <p>
+            If you're happy, tell me.<br>
+            If you're hurt, tell me.<br>
+            If you need space, tell me.<br>
+            If something is bothering you, tell me.<br>
+            If you don't want this anymore, tell me.
+          </p>
+          <div class="conf-highlight">
+            And if you choose me, choose me because you actually want to build something with me.<br>
+            Not because I waited long enough.<br>
+            Not because I convinced you.<br>
+            Not because you feel sorry for me.<br>
+            <strong>Because you want me.</strong>
+          </div>
+        </div>
+        <span class="conf-sign">— Ayush</span>
+      </div>
+
+      <!-- 09 -->
+      <div class="confession-entry">
+        <p class="conf-number">✦ Confession 09</p>
+        <h2 class="conf-heading">And If You <em>Don't Choose Me</em></h2>
+        <div class="conf-body">
+          <p>
+            This is probably the hardest thing for me to write.
+          </p>
+          <p>
+            But I need you to know that I understand.
+          </p>
+          <p>
+            I will never want your love because you were forced into it.
+            I would rather have your honest “no” than a “yes” that your heart doesn't mean.
+          </p>
+          <p>
+            Of course it would hurt.<br>
+            I'd probably think about you for a long time.<br>
+            I'd miss you.<br>
+            I'd remember everything.
+          </p>
+          <div class="conf-highlight">
+            But I would rather remember something real than hold onto something that you no longer want.
+          </div>
+        </div>
+        <span class="conf-sign">— Ayush</span>
+      </div>
+
+      <!-- 10 -->
+      <div class="confession-entry">
+        <p class="conf-number">✦ Confession 10</p>
+        <h2 class="conf-heading">My Real <em>Confession</em></h2>
+        <div class="conf-body">
+          <p>
+            I don't know exactly what our future looks like.<br>
+            I don't know what the next few weeks will bring.<br>
+            I don't know whether everything will become easy.
+          </p>
+          <p>
+            But I know what you mean to me.
+          </p>
+          <p>
+            You became someone I cared about deeply.<br>
+            Someone whose happiness mattered to me.<br>
+            Someone whose smallest gestures could change my entire day.<br>
+            Someone I wanted to make memories with.<br>
+            Someone I wanted to protect, sometimes too much.<br>
+            Someone I wanted to understand, sometimes too desperately.
+          </p>
+          <p>
+            And someone I still love.
+          </p>
+          <p>
+            But now I want to love you differently.
+          </p>
+          <p>
+            With less fear.<br>
+            Less control.<br>
+            More trust.<br>
+            More patience.<br>
+            More honesty.<br>
+            More freedom.
+          </p>
+          <p>
+            Because if we ever become “us” again, I don't want the same version of us.
+          </p>
+          <p>
+            I want a healthier one.<br>
+            A calmer one.<br>
+            A version where you don't feel trapped and I don't feel terrified.<br>
+            A version where we both choose each other.<br>
+            Every day.<br>
+            Freely.
+          </p>
+          <div class="conf-highlight">
+            And if that day comes…<br><br>
+            I'll be grateful that after all the confusion,<br>
+            after all the fear,<br>
+            after all the distance,<br><br>
+            <strong>we still found our way back to each other.</strong>
+          </div>
+        </div>
+        <span class="conf-sign">— Ayush</span>
+      </div>
+
+    </div><!-- /confessions-list -->
+
+    <!-- OPTIONAL / SOON VOICE NOTES ACCORDION / FOOTNOTE -->
+    <div class="section-block" style="max-width:760px; position:relative; z-index:2; text-align:center; padding-top:20px;">
+      <p class="block-label">✦ Voice Notes &nbsp; Coming Soon</p>
+      <p class="block-body" style="font-size: 1rem; opacity: 0.7;">
+        Some things are spoken softer in person. Whenever voice notes are added, they will appear right here.
+      </p>
     </div>
 
     <!-- FOOTER -->
     <footer class="page-footer">
       <span class="page-footer-script">Always, Ayush</span>
-      <p class="page-footer-meta">A page that grows as I find the words</p>
+      <p class="page-footer-meta">Written from the heart · September 2026</p>
     </footer>
 
   </div>
