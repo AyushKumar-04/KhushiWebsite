@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Her Universe — What Khushi Loves</title>
+  <meta name="description" content="Everything about Khushi — what she loves, what she doesn't, the things that make her exactly her.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <style>
+    .universe-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .universe-section-header {
+      margin-bottom: 32px;
+    }
+
+    .universe-section-header .block-heading {
+      margin-bottom: 8px;
+    }
+
+    /* Coming soon tag */
+    .add-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(184, 169, 212, 0.05);
+      border: 1px dashed rgba(184, 169, 212, 0.15);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 12px;
+    }
+
+    .add-soon-dot {
+      width: 6px; height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.4;
+      animation: pulseRing 2s ease-in-out infinite;
+    }
+
+    .add-soon p {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 0.88rem;
+      color: rgba(160, 154, 184, 0.45);
+    }
+
+    .section-divide {
+      max-width: 960px;
+      margin: 0 auto 60px;
+      padding: 0 40px;
+      border-top: 1px solid rgba(184, 169, 212, 0.07);
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .universe-section { padding: 0 20px 60px; }
+      .section-divide { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Blurred background — her flowers photo -->
+  <div class="page-bg" style="background-image: url('assets/images/khushi_flowers.jpg');"></div>
+  <div class="page-bg-tint"></div>
+
+  <canvas id="particles-canvas"></canvas>
+  <canvas id="trail-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="page-nav">
+    <a href="index.html" class="nav-logo">Khushi</a>
+    <ul class="page-nav-links">
+      <li><a href="index.html#stories">Memories</a></li>
+      <li><a href="why-you.html">Why You</a></li>
+      <li><a href="confession.html">Confession</a></li>
+    </ul>
+    <a href="index.html" class="back-pill">← Back Home</a>
+  </nav>
+
+  <div class="page-content">
+
+    <!-- HERO -->
+    <div class="page-hero">
+      <p class="page-eyebrow">✦ &nbsp; A study of her &nbsp; ✦</p>
+      <h1 class="page-title">
+        Her
+        <span class="script">Universe</span>
+      </h1>
+      <p class="page-subtitle">
+        The things she loves. The things she doesn't.<br>
+        The little details that make her exactly who she is.
+      </p>
+      <div class="scroll-cue">
+        <span>Explore</span>
+        <div class="scroll-cue-line"></div>
+      </div>
+    </div>
+
+    <!-- HER PHOTO -->
+    <div class="featured-photo" style="position:relative;z-index:2;max-width:640px;">
+      <img src="assets/images/khushi_golden_hair.jpg" alt="Khushi" loading="lazy" style="aspect-ratio:3/4;object-fit:cover;">
+      <p class="featured-photo-caption">Her golden hours</p>
+    </div>
+
+    <!-- WHAT SHE LOVES -->
+    <div class="universe-section">
+      <div class="universe-section-header">
+        <p class="block-label">✦ What she loves</p>
+        <h2 class="block-heading">Her <em>Favourites</em></h2>
+        <div class="block-rule"></div>
+      </div>
+
+      <div class="likes-grid" style="padding:0; margin:0;">
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🥟</div>
+          <div>
+            <p class="like-name">Momos</p>
+            <p class="like-note">Steamed, spicy chutney on the side — every single time</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🫧</div>
+          <div>
+            <p class="like-name">Golgappe</p>
+            <p class="like-note">The tangier, the better. No negotiations.</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🧄</div>
+          <div>
+            <p class="like-name">Garlic Bread</p>
+            <p class="like-note">Warm, buttery, extra cheese. Her version of perfect.</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🏍️</div>
+          <div>
+            <p class="like-name">Bike Rides</p>
+            <p class="like-note">Wind, speed, no destination. Just go.</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🧸</div>
+          <div>
+            <p class="like-name">Soft Plushies</p>
+            <p class="like-note">The smaller, the fluffier, the more she loves it</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">👓</div>
+          <div>
+            <p class="like-name">Her Glasses</p>
+            <p class="like-note">Practically her signature. She wears them perfectly.</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🌸</div>
+          <div>
+            <p class="like-name">Flowers</p>
+            <p class="like-note">They lean toward her. I've seen the photos.</p>
+          </div>
+        </div>
+
+        <div class="like-card">
+          <div class="like-icon-wrap">🐾</div>
+          <div>
+            <p class="like-name">Cute Animals</p>
+            <p class="like-note">The way she looks at animals — complete, unguarded joy</p>
+          </div>
+        </div>
+
+        <!-- PLACEHOLDER -->
+        <div class="add-soon">
+          <div class="add-soon-dot"></div>
+          <p>More of her favourites will appear here — still learning ✦</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section-divide"></div>
+
+    <!-- PHOTO ROW -->
+    <div class="photo-row" style="position:relative;z-index:2;">
+      <img src="assets/images/khushi_pout_close.jpg" alt="Her" loading="lazy">
+      <img src="assets/images/khushi_black_top.jpg" alt="Her" loading="lazy">
+    </div>
+
+    <!-- WHAT SHE DOESN'T LOVE -->
+    <div class="universe-section">
+      <div class="universe-section-header">
+        <p class="block-label">✦ What she doesn't love</p>
+        <h2 class="block-heading">Things She <em>Skips</em></h2>
+        <div class="block-rule"></div>
+      </div>
+
+      <div class="likes-grid" style="padding:0; margin:0;">
+        <!-- PLACEHOLDER — to be filled in by the user -->
+        <div class="add-soon">
+          <div class="add-soon-dot" style="background: var(--rose);"></div>
+          <p>Her dislikes — I'm still learning every detail of her ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOSING QUOTE -->
+    <div class="section-block" style="text-align:center;position:relative;z-index:2;">
+      <p class="block-label" style="display:block;text-align:center;">✦ A Note from Ayush</p>
+      <p class="block-body" style="max-width:540px;margin:0 auto;">
+        "The best way to know someone isn't to ask them what they like —
+        it's to pay attention. And I intend to pay very close attention, always."
+      </p>
+      <div class="block-rule" style="margin: 28px auto;"></div>
+      <span class="block-sign" style="display:block;text-align:center;">— Ayush</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <span class="page-footer-script">Her Universe</span>
+      <p class="page-footer-meta">A page that grows as I learn more about you</p>
+    </footer>
+
+  </div>
+
+  <script src="js/particles.js"></script>
+
+</body>
+</html>

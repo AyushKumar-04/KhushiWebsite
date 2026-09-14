@@ -1,97 +1,97 @@
 /* ==========================================================================
-   Khushi's Love Sanctuary - All 10 Real Photos Gallery & Compliments
+   Gallery — Premium Dark Luxury Photo Cards
    ========================================================================== */
 
 const khushiPhotos = [
   {
     id: 1,
-    src: 'assets/images/khushi1.jpg',
-    tag: 'Day 1 Vibe 👑',
-    caption: 'Effortless Style & Beauty',
+    src: 'assets/images/khushi_flowers.jpg',
+    tag: 'With Flowers ✦',
+    caption: 'Blooming',
     compliment:
-      'In just 2 short weeks of knowing you, your confidence and chic style never fail to amaze me! From the very first day we started talking, you stole Ayush\'s heart.',
-    rating: '10/10 - Absolute Perfection ✨'
+      'Even the flowers seem to lean toward you. This picture — you with that bouquet, those eyes looking sideways — I could stare at it for hours and still feel something new.',
+    rating: '∞ / 10 — Absolutely Ethereal'
   },
   {
     id: 2,
-    src: 'assets/images/khushi2.jpg',
-    tag: 'Midnight Magic 🌙',
-    caption: 'Aesthetic Golden Glow',
+    src: 'assets/images/khushi_bw_glasses.jpg',
+    tag: 'Black & White ✦',
+    caption: 'Timeless',
     compliment:
-      'Look at this aesthetic picture! Knowing you for these 14 days feels like a sweet dream. You bring so much light and good vibes into my life, Khushi!',
-    rating: '∞/10 - Pure Serotonin 🌟'
+      'Black and white was made for you. You have this quiet intensity that makes people stop and look twice. Classic, mysterious, and completely breathtaking.',
+    rating: '10 / 10 — Pure Cinema'
   },
   {
     id: 3,
-    src: 'assets/images/khushi3.jpg',
-    tag: 'Cozy Cuddle 🐱',
-    caption: 'Softness & Kitten Snuggles',
+    src: 'assets/images/khushi_red_shirt.jpg',
+    tag: 'Night Out ✦',
+    caption: 'That Smile',
     compliment:
-      'Two absolute cuties in one frame! Seeing how sweet and loving you are with animals made Ayush realize within 2 weeks just how precious you are.',
-    rating: '100/10 - Cutest Girl Ever 🌸'
+      'The lights in the background, the red, that shy little smile you make — I don\'t know what to say. You make an ordinary night look like a scene from a film I never want to end.',
+    rating: '10 / 10 — Unforgettable'
   },
   {
     id: 4,
-    src: 'assets/images/khushi4.jpg',
-    tag: 'Puppy Hugs 🎀',
-    caption: 'Pink Bows & Cute Smiles',
+    src: 'assets/images/khushi_eyes_closeup.jpg',
+    tag: 'Just Your Eyes ✦',
+    caption: 'The Universe',
     compliment:
-      'This photo defines true softness! Pink bows, glasses, and a tiny black puppy! In just 14 days of getting to know you, every conversation with you is the highlight of my day.',
-    rating: '1000/10 - Heart-Melting 💕'
+      'I could write entire pages about your eyes. Behind those glasses, behind that gaze — there\'s an entire world I want to spend my life trying to understand. You\'re extraordinary.',
+    rating: '∞ / 10 — Everything'
   },
   {
     id: 5,
-    src: 'assets/images/khushi5.jpg',
-    tag: 'Radiant Smile 🏛️',
-    caption: 'The Universe\'s Masterpiece',
+    src: 'assets/images/khushi_holding_hands.jpg',
+    tag: 'Us ✦',
+    caption: 'Together',
     compliment:
-      'Your smile here is breathtaking! These past 2 weeks have been the happiest 14 days for Ayush. Never stop smiling like this, Khushi!',
-    rating: '10000/10 - Unmatched Smile 💖'
+      'This is my favourite photo. Not because it\'s perfect — because it\'s real. Your hand in mine, hidden under the desk, like a quiet little secret only we knew. I\'d keep that secret forever.',
+    rating: '10 / 10 — My Everything'
   },
   {
     id: 6,
-    src: 'assets/images/khushi6.jpg',
-    tag: 'Flower Power 🌸',
-    caption: 'The Cutest Flower Pout',
+    src: 'assets/images/khushi1.jpg',
+    tag: 'You ✦',
+    caption: 'Just You',
     compliment:
-      'How are you this cute?! That purple flower on your hair and your pout pose melt Ayush\'s heart completely. 2 weeks in, and I\'m totally hooked on you!',
-    rating: '100/10 - Pure Adorableness 🌺'
+      'Every time I look at this, I can\'t help but think — how did I get so lucky? You walked into my life and somehow made everything brighter without even trying.',
+    rating: '10 / 10 — Effortlessly Beautiful'
   },
   {
     id: 7,
-    src: 'assets/images/khushi7.jpg',
-    tag: 'Biker Girl 🏍️',
-    caption: 'Helmet & Highway Vibes',
+    src: 'assets/images/khushi2.jpg',
+    tag: 'Golden ✦',
+    caption: 'Golden Hour',
     compliment:
-      'Look at my badass biker girl! You in a motorcycle helmet with a pink bow is the coolest & cutest sight ever. Can\'t wait for our real sunset bike ride!',
-    rating: '∞/10 - Ultimate Biker Queen 🏁'
+      'This photo has a warmth to it that matches exactly how you make me feel. You are someone I look forward to, every single day — that\'s a rare thing.',
+    rating: '10 / 10 — My Favourite Feeling'
   },
   {
     id: 8,
-    src: 'assets/images/khushi8.jpg',
-    tag: 'Daily Cute Moment 🥛',
-    caption: '"Doodh lene jaana h btw"',
+    src: 'assets/images/khushi5.jpg',
+    tag: 'Radiant ✦',
+    caption: 'That Glow',
     compliment:
-      'This picture and caption made Ayush laugh out loud! You make even the simplest everyday things look so charming and adorable.',
-    rating: '10/10 - Iconic Energy 😂❤️'
+      'Some people light up a room. You light up everything around them. I notice it every time. You don\'t even know you\'re doing it, and that\'s exactly what makes it so beautiful.',
+    rating: '10 / 10 — Pure Sunlight'
   },
   {
     id: 9,
-    src: 'assets/images/khushi9.jpg',
-    tag: 'B&W Elegance 🖤',
-    caption: 'Vintage Black & White Grace',
+    src: 'assets/images/khushi6.jpg',
+    tag: 'Adorable ✦',
+    caption: 'Flower Crown',
     compliment:
-      'Classic, elegant, and mesmerizing. Black & white photos capture your natural beauty so effortlessly. You look like a movie actress here, Khushi!',
-    rating: '1000/10 - Vintage Beauty 🎬'
+      'You and flowers were clearly made for each other. The purple, the pout — there\'s a kind of magic in how naturally beautiful you are without even realizing it.',
+    rating: '10 / 10 — Unbearably Cute'
   },
   {
     id: 10,
     src: 'assets/images/khushi10.jpg',
-    tag: 'Road Trip Vibe 🚗',
-    caption: 'Sunset Window Gaze',
+    tag: 'Dreaming ✦',
+    caption: 'Window Gaze',
     compliment:
-      'Looking out the car window in that gorgeous pink top! 2 weeks ago we met, and every moment with you feels like an exciting road trip adventure.',
-    rating: '10^10 / 10 - Dreamy Vibe 🌅'
+      'Watching you look out that window, I wondered what you were thinking. I hope it was something good. I hope that sometimes, it\'s me.',
+    rating: '10 / 10 — Dreamy'
   }
 ];
 
@@ -103,15 +103,15 @@ function initGallery() {
 
   khushiPhotos.forEach((photo, index) => {
     const card = document.createElement('div');
-    card.className = 'polaroid-card';
+    // Make the first holding-hands photo and the eyes photo take more space
+    const isLarge = index === 4; // hands photo
+    card.className = `photo-card${isLarge ? ' large' : ''}`;
 
     card.innerHTML = `
-      <div class="polaroid-img-wrapper">
-        <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
-      </div>
-      <div class="polaroid-caption">${photo.caption}</div>
-      <div style="font-size: 0.8rem; text-align: center; color: var(--primary-accent); font-weight: 600; margin-top: 6px;">
-        Tap for Ayush's Note ❤️
+      <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
+      <div class="photo-card-overlay">
+        <div class="photo-card-num">✦ ${String(index + 1).padStart(2, '0')}</div>
+        <div class="photo-card-caption">${photo.caption}</div>
       </div>
     `;
 
@@ -121,8 +121,8 @@ function initGallery() {
 }
 
 function openPhotoModal(photo) {
-  window.loveAudio.playSparkle();
-  
+  if (window.loveAudio) window.loveAudio.playSparkle();
+
   const modal = document.getElementById('photo-modal');
   if (!modal) return;
 
@@ -137,57 +137,78 @@ function openPhotoModal(photo) {
 }
 
 function closePhotoModal() {
-  window.loveAudio.playPop();
+  if (window.loveAudio) window.loveAudio.playPop();
   const modal = document.getElementById('photo-modal');
   if (modal) modal.classList.remove('active');
 }
 
 function triggerHeartBurst() {
   const burstContainer = document.createElement('div');
-  burstContainer.style.position = 'fixed';
-  burstContainer.style.top = '50%';
-  burstContainer.style.left = '50%';
-  burstContainer.style.transform = 'translate(-50%, -50%)';
-  burstContainer.style.pointerEvents = 'none';
-  burstContainer.style.zIndex = '999999';
+  burstContainer.style.cssText = `
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 999999;
+  `;
   document.body.appendChild(burstContainer);
 
-  for (let i = 0; i < 18; i++) {
+  for (let i = 0; i < 20; i++) {
     const heart = document.createElement('div');
-    heart.textContent = ['💖', '💕', '✨', '💋', '❤️'][Math.floor(Math.random() * 5)];
+    heart.textContent = ['💖', '💕', '✨', '💋', '❤️', '🌹'][Math.floor(Math.random() * 6)];
     heart.style.position = 'absolute';
-    heart.style.fontSize = `${Math.random() * 20 + 16}px`;
-    
+    heart.style.fontSize = `${Math.random() * 22 + 14}px`;
+
     const angle = Math.random() * Math.PI * 2;
-    const dist = Math.random() * 160 + 40;
+    const dist = Math.random() * 180 + 60;
     const tx = Math.cos(angle) * dist;
     const ty = Math.sin(angle) * dist;
 
-    heart.style.transition = 'all 0.9s cubic-bezier(0.16, 1, 0.3, 1)';
+    heart.style.transition = 'all 1.1s cubic-bezier(0.16, 1, 0.3, 1)';
     heart.style.opacity = '1';
-
     burstContainer.appendChild(heart);
 
     setTimeout(() => {
-      heart.style.transform = `translate(${tx}px, ${ty}px) scale(1.3)`;
+      heart.style.transform = `translate(${tx}px, ${ty}px) scale(1.4)`;
       heart.style.opacity = '0';
     }, 20);
   }
 
-  setTimeout(() => burstContainer.remove(), 1000);
+  setTimeout(() => burstContainer.remove(), 1200);
 }
 
 function sendKissToAyush() {
-  window.loveAudio.playCheer();
+  if (window.loveAudio) window.loveAudio.playCheer();
   triggerHeartBurst();
-  alert("💋 MWAH! Ayush received your kiss! 2 weeks in and he is completely crazy about you! ❤️");
+
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position: fixed; inset: 0; z-index: 9999999;
+    background: rgba(8, 8, 12, 0.92);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    animation: fadeIn 0.3s ease;
+  `;
+  overlay.innerHTML = `
+    <div style="text-align:center; padding: 40px; max-width: 480px;">
+      <div style="font-size: 4rem; margin-bottom: 20px; animation: heartbeat 1s ease infinite;">💋</div>
+      <p style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #e8b891; margin-bottom: 16px; line-height: 1.2;">Kiss received!</p>
+      <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: #e8e0d8; line-height: 1.7; margin-bottom: 32px;">
+        "You just made my entire day. Actually, my entire week.<br>You have no idea how much I care about you."
+      </p>
+      <button onclick="this.parentElement.parentElement.remove()" style="background: linear-gradient(135deg, #c9956c, #c47a7a); color: #08080c; border: none; padding: 14px 32px; border-radius: 9999px; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; font-weight: 600;">
+        Close ✦
+      </button>
+    </div>
+  `;
+  document.body.appendChild(overlay);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   initGallery();
+
   const closeBtn = document.getElementById('modal-close');
   if (closeBtn) closeBtn.addEventListener('click', closePhotoModal);
-  
+
   const modalOverlay = document.getElementById('photo-modal');
   if (modalOverlay) {
     modalOverlay.addEventListener('click', (e) => {

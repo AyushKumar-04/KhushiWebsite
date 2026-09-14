@@ -3,275 +3,294 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khushi & Ayush ❤️ | 2 Weeks Special</title>
-  <meta name="description" content="A minimal, romantic web sanctuary created specially for Khushi by Ayush with all 10 photos of Khushi to celebrate their 2 weeks together!">
-  
-  <!-- Minimal Fonts -->
+  <title>For Khushi — Always</title>
+  <meta name="description" content="A love letter in a website — made for Khushi, by Ayush.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
-<body class="light-theme">
+<body>
 
   <canvas id="particles-canvas"></canvas>
   <canvas id="trail-canvas"></canvas>
 
-  <!-- Navigation Bar -->
+  <!-- NAV -->
   <header>
-    <nav class="navbar">
-      <a href="#hero" class="nav-logo">
-        <span>Khushi</span> & Ayush
-      </a>
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav-logo">Khushi</a>
       <ul class="nav-links">
-        <li><a href="#gallery">Gallery (10 Photos)</a></li>
-        <li><a href="#kinderjoy">Kinder Joy</a></li>
-        <li><a href="#food-date">Cravings</a></li>
-        <li><a href="#love-notes">Love Notes</a></li>
-        <li><a href="#study-break">Chill Zone</a></li>
+        <li><a href="#stories">Memories</a></li>
+        <li><a href="why-you.html">Why You</a></li>
+        <li><a href="confession.html">Confession</a></li>
+        <li><a href="likes.html">Her Universe</a></li>
       </ul>
-      <div class="nav-actions">
-        <button id="theme-toggle" class="icon-btn" title="Toggle Theme">🌙</button>
-      </div>
+      <a href="likes.html" class="nav-pill">Her Universe ✦</a>
     </nav>
   </header>
 
   <main>
-    <!-- Minimal Hero Section -->
+
+    <!-- ====== HERO — Full Front Home Page Cover ====== -->
     <section id="hero" class="hero-section">
-      <div class="container">
-        <div class="badge-tag">2 Weeks Together ✨</div>
+
+      <!-- Full-bleed background image covering the whole front home page -->
+      <div class="hero-cover-bg">
+        <img
+          src="assets/images/hero_eyes.png"
+          alt="Her eyes — Khushi"
+          class="hero-cover-img"
+          id="hero-parallax"
+        >
+        <div class="hero-cover-overlay"></div>
+      </div>
+
+      <!-- Hero text and CTAs centered over the full cover -->
+      <div class="hero-content">
+        <p class="hero-eyebrow">✦ &nbsp; made with love, for you &nbsp; ✦</p>
         <h1 class="hero-title">
-          To My Dearest <span class="highlight">Khushi</span>
+          To My Dearest <span class="script">Khushi</span>
         </h1>
-        <p class="hero-description">
-          We met 2 weeks ago (14 days!), and you have already brought so much brightness, laughter, and sweetness into Ayush's world. 20 years old, studying hard in college, loving momos, golgappe, garlic bread, soft mini toys & bike rides!
+        <p class="hero-sub">
+          I built this so you know — the way you look at the world makes my entire world more beautiful.
         </p>
+
         <div class="hero-cta">
-          <a href="#gallery" class="btn-primary">View All 10 Photos</a>
-          <a href="#kinderjoy" class="btn-secondary">Unwrap Kinder Joy</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-card glass-card">
-            <div class="number">10</div>
-            <div class="label">Special Memories</div>
-          </div>
-          <div class="stat-card glass-card">
-            <div class="number">14</div>
-            <div class="label">Days Known Each Other ❤️</div>
-          </div>
-          <div class="stat-card glass-card">
-            <div class="number">100%</div>
-            <div class="label">Momo & Kinder Joy Fan</div>
-          </div>
+          <a href="#stories" class="btn-primary">Our Memories</a>
+          <a href="likes.html" class="btn-ghost">Her Universe ✦</a>
         </div>
       </div>
+
+      <!-- Bottom Scroll Cue indicating other things come below -->
+      <a href="#stories" class="hero-scroll-cue" aria-label="Scroll to memories">
+        <span>Scroll down</span>
+        <span class="hero-scroll-arrow">↓</span>
+      </a>
+
     </section>
 
-    <!-- Photo Gallery Section (All 10 Photos) -->
-    <section id="gallery">
+    <!-- ====== 6 ALTERNATING PHOTO STORIES ====== -->
+    <div id="stories">
+
+      <!-- Story 01 — Photo Left -->
+      <div class="photo-story" data-story="1">
+        <div class="story-img-pane">
+          <div class="story-num">01</div>
+          <img src="assets/images/khushi_flowers.jpg" alt="With Flowers" loading="lazy">
+        </div>
+        <div class="story-text-pane">
+          <p class="story-index">✦ Memory 01</p>
+          <h2 class="story-heading">Blooming</h2>
+          <div class="story-rule"></div>
+          <p class="story-body">
+            Even the flowers seem to lean toward you. This photo —
+            you with that bouquet, eyes tilted sideways — I could stare
+            at it for hours and still notice something new each time.
+          </p>
+          <div class="story-rule" style="margin-top: 28px;"></div>
+          <span class="story-attr">— Ayush</span>
+        </div>
+      </div>
+
+      <!-- Story 02 — Photo Right -->
+      <div class="photo-story reverse" data-story="2">
+        <div class="story-img-pane">
+          <div class="story-num">02</div>
+          <img src="assets/images/khushi_bw_glasses.jpg" alt="Black and White" loading="lazy">
+        </div>
+        <div class="story-text-pane">
+          <p class="story-index">✦ Memory 02</p>
+          <h2 class="story-heading">Timeless</h2>
+          <div class="story-rule"></div>
+          <p class="story-body">
+            Black and white was made for you. You have this quiet intensity
+            that makes people stop and look twice. Classic, a little mysterious,
+            and completely breathtaking.
+          </p>
+          <div class="story-rule" style="margin-top: 28px;"></div>
+          <span class="story-attr">— Ayush</span>
+        </div>
+      </div>
+
+      <!-- Story 03 — Photo Left -->
+      <div class="photo-story" data-story="3">
+        <div class="story-img-pane">
+          <div class="story-num">03</div>
+          <img src="assets/images/khushi_red_shirt.jpg" alt="Night Out" loading="lazy">
+        </div>
+        <div class="story-text-pane">
+          <p class="story-index">✦ Memory 03</p>
+          <h2 class="story-heading">That Smile</h2>
+          <div class="story-rule"></div>
+          <p class="story-body">
+            The lights in the background, the red, that shy little smile
+            you make — I don't have words for this one. You make an
+            ordinary night look like a film I never want to end.
+          </p>
+          <div class="story-rule" style="margin-top: 28px;"></div>
+          <span class="story-attr">— Ayush</span>
+        </div>
+      </div>
+
+      <!-- Story 04 — Photo Right -->
+      <div class="photo-story reverse" data-story="4">
+        <div class="story-img-pane">
+          <div class="story-num">04</div>
+          <img src="assets/images/khushi_holding_hands.jpg" alt="Together" loading="lazy">
+        </div>
+        <div class="story-text-pane">
+          <p class="story-index">✦ Memory 04</p>
+          <h2 class="story-heading">Together</h2>
+          <div class="story-rule"></div>
+          <p class="story-body">
+            This is my favourite. Not because it's perfect — because it's
+            real. Your hand in mine, hidden under the desk, like a quiet
+            little secret only we knew. I'd keep that secret forever.
+          </p>
+          <div class="story-rule" style="margin-top: 28px;"></div>
+          <span class="story-attr">— Ayush</span>
+        </div>
+      </div>
+
+      <!-- Story 05 — Photo Left -->
+      <div class="photo-story" data-story="5">
+        <div class="story-img-pane">
+          <div class="story-num">05</div>
+          <img src="assets/images/khushi1.jpg" alt="Just You" loading="lazy">
+        </div>
+        <div class="story-text-pane">
+          <p class="story-index">✦ Memory 05</p>
+          <h2 class="story-heading">Just You</h2>
+          <div class="story-rule"></div>
+          <p class="story-body">
+            Every time I look at this photo, I can't help but think —
+            how did I get so lucky? You walked into my life and somehow
+            made everything brighter without even trying.
+          </p>
+          <div class="story-rule" style="margin-top: 28px;"></div>
+          <span class="story-attr">— Ayush</span>
+        </div>
+      </div>
+
+      <!-- Story 06 — Photo Right -->
+      <div class="photo-story reverse" data-story="6">
+        <div class="story-img-pane">
+          <div class="story-num">06</div>
+          <img src="assets/images/khushi5.jpg" alt="Radiant" loading="lazy">
+        </div>
+        <div class="story-text-pane">
+          <p class="story-index">✦ Memory 06</p>
+          <h2 class="story-heading">Radiant</h2>
+          <div class="story-rule"></div>
+          <p class="story-body">
+            Some people light up a room. You light up everything around
+            them. I notice it every single time — you never even realize
+            you're doing it, and that's exactly what makes it extraordinary.
+          </p>
+          <div class="story-rule" style="margin-top: 28px;"></div>
+          <span class="story-attr">— Ayush</span>
+        </div>
+      </div>
+
+    </div><!-- /stories -->
+
+    <!-- ====== MORE MOMENTS ====== -->
+    <section id="moments" class="moments-section">
       <div class="container">
-        <div class="badge-tag" style="display: block; text-align: center;">Click Photos For Notes</div>
-        <h2 class="section-title">Khushi's 10 Photo Memories 📸</h2>
-        <p class="section-subtitle">Tap any picture to read Ayush's compliment for you</p>
-        
-        <div id="gallery-container" class="gallery-grid">
-          <!-- All 10 Polaroid cards rendered dynamically via js/gallery.js -->
+        <div class="section-header" style="padding-top: 0; padding-bottom: 48px;">
+          <span class="label-tag">More of You</span>
+          <h2 class="section-heading" style="text-align:center;">
+            Every Frame,<br><em>a Feeling</em>
+          </h2>
         </div>
+      </div>
+
+      <div class="moments-grid">
+
+        <div class="moment-item" onclick="openMoment('assets/images/khushi_golden_hair.jpg','Golden Glow','The golden warmth in this picture — your hair caught in the soft light, that effortless charm. You don\'t even have to try; you\'re just naturally captivating.')">
+          <img src="assets/images/khushi_golden_hair.jpg" alt="Golden Glow" loading="lazy">
+          <div class="moment-overlay"><span class="moment-caption">Golden Glow</span></div>
+        </div>
+
+        <div class="moment-item" onclick="openMoment('assets/images/khushi6.jpg','Flower Crown','You and flowers were clearly made for each other. The purple, the pout — there\'s a kind of magic in how naturally beautiful you are.')">
+          <img src="assets/images/khushi6.jpg" alt="Flower Crown" loading="lazy">
+          <div class="moment-overlay"><span class="moment-caption">Flower Crown</span></div>
+        </div>
+
+        <div class="moment-item" onclick="openMoment('assets/images/khushi2.jpg','Carefree','This photo has a joy and warmth that matches exactly how you make me feel. You are someone I look forward to, every single day.')">
+          <img src="assets/images/khushi2.jpg" alt="Carefree" loading="lazy">
+          <div class="moment-overlay"><span class="moment-caption">Carefree</span></div>
+        </div>
+
+        <div class="moment-item" onclick="openMoment('assets/images/khushi10.jpg','Window Gaze','Watching you look out that window, I wondered what you were thinking. I hope it was something good. I hope that sometimes, it\'s me.')">
+          <img src="assets/images/khushi10.jpg" alt="Window" loading="lazy">
+          <div class="moment-overlay"><span class="moment-caption">Window Gaze</span></div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Real Image Kinder Joy Unboxing -->
-    <section id="kinderjoy">
-      <div class="container">
-        <div class="badge-tag" style="display: block; text-align: center;">Interactive Unboxing</div>
-        <h2 class="section-title">Kinder Joy Surprise Box</h2>
-        <p class="section-subtitle">Unwrap and open your Kinder Joy egg to collect photos & soft toys!</p>
-        
-        <div class="kinder-real-wrapper glass-card">
-          <div id="egg-status" style="font-size: 1.05rem; font-weight: 700; color: var(--primary-accent); margin-bottom: 12px;">
-            Tap Kinder Joy to Unwrap
-          </div>
-
-          <div id="kinder-egg" class="real-egg-img-container">
-            <img src="assets/images/kinder_joy_real.png" alt="Real Kinder Joy Egg">
-          </div>
-
-          <!-- Reveal Toy Box with Real Images & Photos -->
-          <div id="toy-reveal" class="toy-reveal-box">
-            <img id="toy-img-element" src="assets/images/plush_toy_real.png" alt="Surprise Item" class="toy-real-img">
-            <h3 id="toy-name" style="font-family: var(--font-display); font-size: 1.4rem; color: var(--dark-charcoal); margin-bottom: 8px;">
-              Soft Plush Teddy Bear
-            </h3>
-            <p id="toy-note" style="font-style: italic; color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">
-              "A soft plushie for college study sessions!"
-            </p>
-            <div id="collected-counter" style="font-weight: 700; color: var(--primary-accent); margin-bottom: 16px; font-size: 0.9rem;">
-              Surprises Unboxed: 1 / 10 🎁
-            </div>
-            <button id="unbox-again-btn" class="btn-primary" style="padding: 10px 22px; font-size: 0.85rem;">
-              Unwrap Another Egg
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Minimal Real Image Food Craving & Date Planner -->
-    <section id="food-date">
-      <div class="container">
-        <div class="badge-tag" style="display: block; text-align: center;">Cravings & Dates</div>
-        <h2 class="section-title">Khushi's Craving Planner</h2>
-        <p class="section-subtitle">Select what you're in the mood for to create our Date Voucher</p>
-
-        <div class="food-grid">
-          <!-- Momos Card -->
-          <div class="food-card">
-            <div class="food-img-wrapper">
-              <img src="assets/images/momos_real.png" alt="Steamed Momos">
-            </div>
-            <h3 class="food-title">Steamed Momos</h3>
-            <p class="food-desc">Hot dumplings with spicy red chutney</p>
-            <button id="btn-momo" class="btn-secondary">Select Momos</button>
-          </div>
-
-          <!-- Golgappe Card -->
-          <div class="food-card">
-            <div class="food-img-wrapper">
-              <img src="assets/images/golgappe_real.png" alt="Crispy Golgappe">
-            </div>
-            <h3 class="food-title">Crispy Golgappe</h3>
-            <p class="food-desc">Tangy & spicy pani-puri perfection</p>
-            <button id="btn-golgappe" class="btn-secondary">Select Golgappe</button>
-          </div>
-
-          <!-- Garlic Bread Card -->
-          <div class="food-card">
-            <div class="food-img-wrapper">
-              <img src="assets/images/garlic_bread_real.png" alt="Cheesy Garlic Bread">
-            </div>
-            <h3 class="food-title">Cheesy Garlic Bread</h3>
-            <p class="food-desc">Warm, buttery, extra cheese pull</p>
-            <button id="btn-garlic" class="btn-secondary">Select Garlic Bread</button>
-          </div>
-
-          <!-- Bike Ride Card with Khushi's REAL Helmet Biker Photo! -->
-          <div class="food-card">
-            <div class="food-img-wrapper">
-              <img src="assets/images/khushi7.jpg" alt="Biker Girl Khushi">
-            </div>
-            <h3 class="food-title">Sunset Bike Ride</h3>
-            <p class="food-desc">Highway cruising down golden hour with Ayush</p>
-            <button id="btn-bike" class="btn-secondary">Select Bike Ride</button>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 36px;">
-          <button id="generate-voucher-btn" class="btn-primary">
-            Generate Date Voucher 🎟️
-          </button>
-        </div>
-
-        <div id="coupon-display" class="coupon-display">
-          <div id="coupon-details"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reasons Grid -->
-    <section id="love-notes">
-      <div class="container">
-        <div class="badge-tag" style="display: block; text-align: center;">2-Week Special</div>
-        <h2 class="section-title">Why Ayush Loves Khushi</h2>
-        <p class="section-subtitle">Click cards to flip</p>
-
-        <div id="reasons-container" class="reasons-grid">
-          <!-- Flip cards rendered dynamically -->
-        </div>
-      </div>
-    </section>
-
-    <!-- College Study Break -->
-    <section id="study-break">
-      <div class="container">
-        <div class="badge-tag" style="display: block; text-align: center;">College Days</div>
-        <h2 class="section-title">College Chill Zone</h2>
-        <p class="section-subtitle">Take a quiet break from assignments</p>
-
-        <div class="chill-box glass-card">
-          <div style="text-align: center;">
-            <div id="breathe-circle" class="breathe-circle">
-              Breathe In...
-            </div>
-            <button id="btn-breathe" class="btn-primary" style="margin-top: 20px;">
-              Start 1-Min Breathe
-            </button>
-          </div>
-
-          <div>
-            <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--dark-charcoal); margin-bottom: 10px;">
-              Serotonin Boost
-            </h3>
-            <p style="color: var(--text-muted); margin-bottom: 18px; font-size: 0.95rem;">
-              Tap anytime for quick encouragement during college study hours
-            </p>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;">
-              <button id="btn-hug" class="btn-secondary">Soft Toy Hug 🧸</button>
-              <button id="btn-pep" class="btn-secondary">Ayush's Pep Talk 💬</button>
-            </div>
-            <div id="pep-talk-text" style="font-style: italic; color: var(--primary-accent); font-size: 0.95rem; background: var(--primary-accent-light); padding: 14px; border-radius: 10px;">
-              "Tap 'Ayush's Pep Talk' for a sweet message!"
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- Photo Modal Lightbox -->
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span class="footer-script">Always, Ayush</span>
+    <p class="footer-meta">Made with love · September 2026</p>
+    <a href="likes.html" class="footer-likes-link">Her Universe ✦</a>
+  </footer>
+
+  <!-- MODAL -->
   <div id="photo-modal" class="modal-overlay">
     <div class="modal-card">
-      <button id="modal-close" class="modal-close-btn" title="Close Modal">✕</button>
-      <div class="modal-img-container">
-        <img id="modal-img" src="" alt="Khushi Photo">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-img-pane">
+        <img id="modal-img" src="" alt="">
       </div>
       <div class="modal-body">
         <div>
-          <div id="modal-tag" class="modal-tag">Tag</div>
-          <h2 id="modal-title" class="modal-title">Photo Title</h2>
-          <div id="modal-compliment" class="modal-compliment">Compliment text</div>
+          <div class="modal-label" id="modal-label">Memory</div>
+          <h2 class="modal-title" id="modal-title">—</h2>
+          <div class="modal-quote" id="modal-quote">—</div>
         </div>
-        <div>
-          <div style="font-weight: 700; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">
-            Vibe Rating: <span id="modal-rating" style="color: var(--primary-accent);">10/10</span>
-          </div>
-          <button class="btn-primary" onclick="sendKissToAyush()" style="width: 100%; justify-content: center;">
-            Send a Kiss to Ayush 💋
-          </button>
-        </div>
+        <button class="btn-primary" onclick="sendKissToAyush()" style="width:100%;justify-content:center;">
+          Send a Kiss to Ayush 💋
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Audio Player Widget -->
-  <div class="audio-player-widget">
-    <div id="music-disk" class="music-disk">🎵</div>
-    <button id="music-toggle-btn" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">
-      <span>Play Romantic Music</span>
-    </button>
-  </div>
-
-  <script src="js/audio.js"></script>
-  <script src="js/gallery.js"></script>
-  <script src="js/kinderjoy.js"></script>
-  <script src="js/food-date.js"></script>
-  <script src="js/love-notes.js"></script>
-  <script src="js/study-break.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    function openMoment(src, title, quote) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-quote').textContent = '"' + quote + '"';
+      document.getElementById('photo-modal').classList.add('active');
+    }
+    document.getElementById('modal-close').addEventListener('click', () => {
+      document.getElementById('photo-modal').classList.remove('active');
+    });
+    document.getElementById('photo-modal').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.remove('active');
+    });
+    function sendKissToAyush() {
+      document.getElementById('photo-modal').classList.remove('active');
+      const o = document.createElement('div');
+      o.style.cssText = 'position:fixed;inset:0;z-index:9999999;background:rgba(7,7,16,0.94);display:flex;flex-direction:column;align-items:center;justify-content:center;animation:fadeIn .3s ease';
+      o.innerHTML = `<div style="text-align:center;padding:40px;max-width:440px">
+        <div style="font-size:3rem;margin-bottom:20px;animation:heartbeat 1s ease infinite">💋</div>
+        <p style="font-family:'Great Vibes',cursive;font-size:2.2rem;color:var(--accent-soft);margin-bottom:14px">Kiss received</p>
+        <p style="font-family:'EB Garamond',serif;font-style:italic;font-size:1rem;color:var(--text-secondary);line-height:1.9;margin-bottom:28px">"You just made my entire day. Actually, my entire week. You have no idea how much I care about you."</p>
+        <button onclick="this.parentElement.parentElement.remove()" style="background:var(--accent);color:var(--bg);border:none;padding:12px 28px;border-radius:9999px;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-weight:500;font-family:'Inter',sans-serif">Close ✦</button>
+      </div>`;
+      document.body.appendChild(o);
+    }
+  </script>
+
 </body>
 </html>

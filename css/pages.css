@@ -1,0 +1,474 @@
+/* ==========================================================================
+   Shared Page Styles — Premium Blurred Background + Content Layer
+   Used across why-you.html, confession.html, likes.html
+   ========================================================================== */
+
+/* Full-page blurred photo background */
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(28px) brightness(0.22) saturate(0.6);
+  transform: scale(1.08); /* prevent blur edge white artifacts */
+  pointer-events: none;
+}
+
+/* Dark tint layer on top of blur */
+.page-bg-tint {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgba(7, 7, 16, 0.55);
+  pointer-events: none;
+}
+
+/* All content sits above the bg */
+.page-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ====== SHARED PAGE NAV ====== */
+.page-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1160px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 28px;
+  background: rgba(7, 7, 16, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(184, 169, 212, 0.12);
+  border-radius: 9999px;
+}
+
+.page-nav .nav-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: var(--accent-soft);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.page-nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.page-nav-links a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.page-nav-links a:hover { color: var(--accent-soft); }
+
+.back-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(184, 169, 212, 0.07);
+  border: 1px solid rgba(184, 169, 212, 0.15);
+  color: var(--accent-soft);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.back-pill:hover {
+  background: rgba(184, 169, 212, 0.12);
+  border-color: var(--accent);
+}
+
+/* ====== SHARED PAGE HERO ====== */
+.page-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+}
+
+.page-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.65;
+  margin-bottom: 22px;
+}
+
+.page-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #f0eef8;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.page-title .script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2em;
+  color: var(--accent-soft);
+  display: block;
+  line-height: 0.9;
+}
+
+.page-subtitle {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgba(160, 154, 184, 0.85);
+  margin: 24px auto 0;
+  max-width: 520px;
+  line-height: 1.9;
+}
+
+/* Scroll cue */
+.scroll-cue {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.35;
+}
+
+.scroll-cue span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.scroll-cue-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: float 2s ease-in-out infinite;
+}
+
+/* ====== CONTENT SECTIONS ====== */
+.section-block {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.section-block + .section-block {
+  border-top: 1px solid rgba(184, 169, 212, 0.07);
+}
+
+.block-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.55;
+  margin-bottom: 18px;
+}
+
+.block-heading {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: #f0eef8;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.3px;
+}
+
+.block-heading em {
+  font-style: italic;
+  color: var(--accent-soft);
+}
+
+.block-body {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: rgba(160, 154, 184, 0.9);
+  line-height: 2;
+}
+
+.block-rule {
+  width: 36px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.25;
+  margin: 28px 0;
+}
+
+.block-sign {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: var(--rose);
+  opacity: 0.65;
+}
+
+/* ====== PHOTO DISPLAY ====== */
+.featured-photo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.featured-photo img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+  filter: brightness(0.9) saturate(0.9);
+  transition: filter 0.4s ease;
+}
+
+.featured-photo img:hover {
+  filter: brightness(0.98) saturate(1);
+}
+
+.featured-photo-caption {
+  text-align: center;
+  margin-top: 16px;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(160, 154, 184, 0.5);
+}
+
+/* Two-col photo row */
+.photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px 60px;
+}
+
+.photo-row img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  filter: brightness(0.85) saturate(0.85);
+  transition: all 0.5s ease;
+}
+
+.photo-row img:hover {
+  filter: brightness(0.95) saturate(1);
+  transform: scale(1.01);
+}
+
+/* ====== VOICE NOTE CARD ====== */
+.voice-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.voice-card {
+  background: rgba(16, 16, 30, 0.75);
+  border: 1px solid rgba(184, 169, 212, 0.1);
+  border-radius: 14px;
+  padding: 24px 28px;
+  backdrop-filter: blur(12px);
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  align-items: center;
+  transition: border-color 0.3s ease;
+}
+
+.voice-card:hover {
+  border-color: rgba(184, 169, 212, 0.22);
+}
+
+.voice-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(184, 169, 212, 0.1);
+  border: 1px solid rgba(184, 169, 212, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  animation: pulseRing 3s ease-in-out infinite;
+}
+
+.voice-meta-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+.voice-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  color: #f0eef8;
+  margin-bottom: 4px;
+}
+
+.voice-note-text {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: rgba(160, 154, 184, 0.6);
+}
+
+.voice-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.45;
+}
+
+.voice-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* ====== LIKES LIST ====== */
+.likes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.like-card {
+  background: rgba(16, 16, 30, 0.7);
+  border: 1px solid rgba(184, 169, 212, 0.08);
+  border-radius: 14px;
+  padding: 20px 22px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.like-card:hover {
+  border-color: rgba(184, 169, 212, 0.2);
+  transform: translateY(-3px);
+}
+
+.like-card.dislike-card:hover {
+  border-color: rgba(212, 168, 184, 0.2);
+}
+
+.like-icon-wrap {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: rgba(184, 169, 212, 0.07);
+  border: 1px solid rgba(184, 169, 212, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.dislike-card .like-icon-wrap {
+  background: rgba(212, 168, 184, 0.07);
+  border-color: rgba(212, 168, 184, 0.12);
+}
+
+.like-name {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0eef8;
+  margin-bottom: 2px;
+}
+
+.like-note {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: rgba(160, 154, 184, 0.55);
+  line-height: 1.5;
+}
+
+/* ====== PAGE FOOTER ====== */
+.page-footer {
+  text-align: center;
+  padding: 56px 24px 64px;
+  border-top: 1px solid rgba(184, 169, 212, 0.07);
+  position: relative;
+  z-index: 2;
+}
+
+.page-footer-script {
+  display: block;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.6rem;
+  color: var(--accent-soft);
+  opacity: 0.45;
+  margin-bottom: 8px;
+}
+
+.page-footer-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .page-nav-links { display: none; }
+  .section-block { padding: 60px 24px; }
+  .featured-photo { padding: 0 20px 60px; }
+  .photo-row { grid-template-columns: 1fr; padding: 0 20px 40px; }
+  .voice-cards { padding: 0 20px 60px; }
+  .likes-grid { padding: 0 20px 60px; }
+}

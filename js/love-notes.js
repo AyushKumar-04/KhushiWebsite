@@ -1,50 +1,44 @@
-/* ==========================================================================
-   Khushi's Love Sanctuary - Love Notes Flip Cards (2-Week Anniversary Special)
-   ========================================================================== */
+/* love-notes.js — Premium flip cards */
 
 const loveNotes = [
-  "In just 2 weeks of knowing you, your laugh has become Ayush's favorite sound in the world.",
-  "14 days ago you walked into my life, and watching you talk about momos & garlic bread is the cutest thing ever!",
-  "2 weeks in, and 20 looks extraordinarily stunning on you, Khushi.",
-  "Even though it's only been 2 weeks, late-night talks & planning bike rides with you feels so natural and special.",
-  "Your love for soft mini plushies shows how sweet & genuine your heart is.",
-  "Knowing you for 14 days feels like I've known a best friend for a lifetime.",
-  "No matter how tough college assignments get, you handle everything like an absolute queen.",
-  "Your smile in every photo made Ayush fall head over heels in just 14 days!",
-  "2 weeks down, forever to go! Excited for all our momo, golgappe & garlic bread dates ahead.",
-  "You brought real 'Khushi' (happiness) into Ayush's life from Day 1.",
-  "Every time you unwrap a Kinder Joy egg, you look so ridiculously adorable.",
-  "14 days of knowing you, 1000 reasons to smile because of you! - Ayush ❤️"
+  "Your laugh is the kind that makes everyone around you want to laugh too — completely infectious, and completely you.",
+  "There's something about the way you adjust your glasses that I find endlessly charming. Every single time.",
+  "You are genuinely one of those rare people who makes ordinary moments feel like they matter.",
+  "The way you say things — so honest, so real — I could listen to you talk for hours and it would never feel like enough.",
+  "You have this quiet strength that you probably don't even notice yourself. But I do. Every time.",
+  "That photo of you with flowers — you made the flowers look less beautiful. And that's saying something.",
+  "The fact that you love momos, golgappe, and garlic bread equally is actually one of the most wonderful things about you.",
+  "You make me want to be more thoughtful, more present — just by being yourself. That's rare.",
+  "Your eyes have this way of looking at the world that makes me wonder what you see. I think it must be beautiful.",
+  "That photo of us holding hands under the desk — I think about that more than I care to admit.",
+  "Knowing you for two weeks feels like knowing someone I've been waiting my whole life to meet.",
+  "You are exactly the kind of person who deserves the world — and I'm going to spend a long time trying to give it to you."
 ];
 
 function initLoveNotes() {
-  const container = document.getElementById('reasons-container');
-  if (!container) return;
+  const grid = document.getElementById('notes-grid');
+  if (!grid) return;
 
-  container.innerHTML = '';
+  grid.innerHTML = '';
 
-  loveNotes.forEach((note, index) => {
+  loveNotes.forEach((note, i) => {
     const card = document.createElement('div');
-    card.className = 'flip-card';
+    card.className = 'note-card';
     card.innerHTML = `
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <div class="card-num">#${index + 1}</div>
-          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">Tap to Flip 💌</div>
+      <div class="note-inner">
+        <div class="note-front">
+          <div class="note-num">${String(i + 1).padStart(2, '0')}</div>
+          <div class="note-hint">Hover to reveal ✦</div>
         </div>
-        <div class="flip-card-back">
-          <div style="font-size: 0.95rem; font-weight: 600; line-height: 1.5;">"${note}"</div>
-          <div style="font-family: var(--font-cursive); font-size: 1.3rem; margin-top: 8px; color: var(--soft-rose);">- Ayush ❤️</div>
+        <div class="note-back">
+          <p>"${note}"</p>
+          <div class="note-sign">— Ayush</div>
         </div>
       </div>
     `;
 
-    card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
-      window.loveAudio.playPop();
-    });
-
-    container.appendChild(card);
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+    grid.appendChild(card);
   });
 }
 

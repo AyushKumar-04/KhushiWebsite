@@ -1,144 +1,105 @@
-/* ==========================================================================
-   Khushi's Love Sanctuary - Canvas Particle & Cursor Trail Effects
-   Floating Hearts, Rose Petals, Glowing Stars & Heart Cursor Trail
-   ========================================================================== */
-
+/* particles.js — Subtle lavender dust particles + cursor trail */
 (function () {
-  // 1. Background Floating Hearts & Petals Canvas
   const bgCanvas = document.getElementById('particles-canvas');
   if (!bgCanvas) return;
   const ctx = bgCanvas.getContext('2d');
 
-  let width = (bgCanvas.width = window.innerWidth);
-  let height = (bgCanvas.height = window.innerHeight);
+  let W = bgCanvas.width = window.innerWidth;
+  let H = bgCanvas.height = window.innerHeight;
+  window.addEventListener('resize', () => { W = bgCanvas.width = window.innerWidth; H = bgCanvas.height = window.innerHeight; });
 
-  window.addEventListener('resize', () => {
-    width = bgCanvas.width = window.innerWidth;
-    height = bgCanvas.height = window.innerHeight;
-  });
-
-  const particles = [];
-  const particleTypes = ['💖', '💕', '✨', '🌸', '❤️', '🧸', '✨'];
-
-  class Particle {
-    constructor() {
-      this.reset();
+  class Dot {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x = Math.random() * W;
+      this.y = init ? Math.random() * H : H + 10;
+      this.r = Math.random() * 1.6 + 0.3;
+      this.vy = Math.random() * 0.5 + 0.15;
+      this.vx = (Math.random() - 0.5) * 0.2;
+      this.a = Math.random() * 0.35 + 0.05;
+      this.hue = 250 + Math.random() * 40; // lavender to purple
+      this.wave = Math.random() * Math.PI * 2;
     }
-
-    reset() {
-      this.x = Math.random() * width;
-      this.y = height + Math.random() * 100;
-      this.size = Math.random() * 18 + 12;
-      this.speedY = Math.random() * 1.5 + 0.5;
-      this.speedX = Math.sin(Math.random() * Math.PI) * 0.8;
-      this.symbol = particleTypes[Math.floor(Math.random() * particleTypes.length)];
-      this.opacity = Math.random() * 0.7 + 0.3;
-      this.rotation = Math.random() * 360;
-      this.rotSpeed = (Math.random() - 0.5) * 2;
-    }
-
     update() {
-      this.y -= this.speedY;
-      this.x += this.speedX + Math.sin(this.y * 0.01) * 0.5;
-      this.rotation += this.rotSpeed;
-
-      if (this.y < -50) {
-        this.reset();
-      }
+      this.y -= this.vy;
+      this.wave += 0.012;
+      this.x += this.vx + Math.sin(this.wave) * 0.25;
+      if (this.y < -10) this.reset(false);
     }
-
     draw() {
       ctx.save();
-      ctx.globalAlpha = this.opacity;
-      ctx.font = `${this.size}px sans-serif`;
-      ctx.translate(this.x, this.y);
-      ctx.rotate((this.rotation * Math.PI) / 180);
-      ctx.fillText(this.symbol, 0, 0);
+      ctx.globalAlpha = this.a;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsl(${this.hue}, 55%, 78%)`;
+      ctx.fill();
+      if (this.r > 1.1) {
+        const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.r * 4);
+        g.addColorStop(0, `hsla(${this.hue}, 55%, 78%, 0.1)`);
+        g.addColorStop(1, 'transparent');
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r * 4, 0, Math.PI * 2);
+        ctx.fillStyle = g;
+        ctx.fill();
+      }
       ctx.restore();
     }
   }
 
-  // Create initial particles
-  for (let i = 0; i < 35; i++) {
-    particles.push(new Particle());
-  }
+  const dots = Array.from({ length: 55 }, () => new Dot());
 
-  function animateBg() {
-    ctx.clearRect(0, 0, width, height);
-    particles.forEach((p) => {
-      p.update();
-      p.draw();
-    });
-    requestAnimationFrame(animateBg);
-  }
+  (function loop() {
+    ctx.clearRect(0, 0, W, H);
+    dots.forEach(d => { d.update(); d.draw(); });
+    requestAnimationFrame(loop);
+  })();
 
-  animateBg();
+  // Trail canvas
+  const tc = document.getElementById('trail-canvas');
+  if (!tc) return;
+  const tCtx = tc.getContext('2d');
+  let tW = tc.width = W, tH = tc.height = H;
+  window.addEventListener('resize', () => { tW = tc.width = window.innerWidth; tH = tc.height = window.innerHeight; });
 
-  // 2. Interactive Heart Cursor Trail
-  const trailCanvas = document.getElementById('trail-canvas');
-  if (!trailCanvas) return;
-  const tCtx = trailCanvas.getContext('2d');
-
-  let tWidth = (trailCanvas.width = window.innerWidth);
-  let tHeight = (trailCanvas.height = window.innerHeight);
-
-  window.addEventListener('resize', () => {
-    tWidth = trailCanvas.width = window.innerWidth;
-    tHeight = trailCanvas.height = window.innerHeight;
-  });
-
-  const trailParticles = [];
-
-  class TrailParticle {
+  const trail = [];
+  class Spark {
     constructor(x, y) {
-      this.x = x;
-      this.y = y;
-      this.size = Math.random() * 14 + 10;
-      this.speedX = (Math.random() - 0.5) * 3;
-      this.speedY = (Math.random() - 0.5) * 3 - 1;
-      this.alpha = 1;
-      this.symbol = Math.random() > 0.3 ? '💖' : '✨';
+      this.x = x + (Math.random() - 0.5) * 4;
+      this.y = y + (Math.random() - 0.5) * 4;
+      this.r = Math.random() * 2 + 0.5;
+      this.vx = (Math.random() - 0.5) * 1.5;
+      this.vy = (Math.random() - 0.5) * 1.5 - 0.3;
+      this.a = 0.7;
+      this.d = Math.random() * 0.025 + 0.018;
+      this.hue = 240 + Math.random() * 60;
     }
-
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-      this.alpha -= 0.025;
-      this.size *= 0.96;
-    }
-
+    update() { this.x += this.vx; this.y += this.vy; this.vy += 0.04; this.a -= this.d; this.r *= 0.97; }
     draw() {
       tCtx.save();
-      tCtx.globalAlpha = Math.max(0, this.alpha);
-      tCtx.font = `${this.size}px sans-serif`;
-      tCtx.fillText(this.symbol, this.x, this.y);
+      tCtx.globalAlpha = Math.max(0, this.a);
+      tCtx.beginPath();
+      tCtx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      tCtx.fillStyle = `hsl(${this.hue}, 60%, 80%)`;
+      tCtx.fill();
       tCtx.restore();
     }
   }
 
-  function addTrail(e) {
-    const x = e.clientX || (e.touches && e.touches[0].clientX);
-    const y = e.clientY || (e.touches && e.touches[0].clientY);
-    if (x && y && Math.random() < 0.6) {
-      trailParticles.push(new TrailParticle(x, y));
+  let lx = 0, ly = 0, frame = 0;
+  window.addEventListener('mousemove', e => {
+    frame++;
+    if (frame % 2) return;
+    if (Math.hypot(e.clientX - lx, e.clientY - ly) < 6) return;
+    lx = e.clientX; ly = e.clientY;
+    for (let i = 0; i < 3; i++) trail.push(new Spark(lx, ly));
+  });
+
+  (function tloop() {
+    tCtx.clearRect(0, 0, tW, tH);
+    for (let i = trail.length - 1; i >= 0; i--) {
+      trail[i].update(); trail[i].draw();
+      if (trail[i].a <= 0 || trail[i].r < 0.2) trail.splice(i, 1);
     }
-  }
-
-  window.addEventListener('mousemove', addTrail);
-  window.addEventListener('touchmove', addTrail);
-
-  function animateTrail() {
-    tCtx.clearRect(0, 0, tWidth, tHeight);
-    for (let i = trailParticles.length - 1; i >= 0; i--) {
-      const p = trailParticles[i];
-      p.update();
-      p.draw();
-      if (p.alpha <= 0 || p.size <= 2) {
-        trailParticles.splice(i, 1);
-      }
-    }
-    requestAnimationFrame(animateTrail);
-  }
-
-  animateTrail();
+    requestAnimationFrame(tloop);
+  })();
 })();
